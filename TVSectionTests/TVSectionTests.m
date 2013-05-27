@@ -9,13 +9,34 @@
 #import "TVSectionTests.h"
 #import "TVSection.h"
 
+@interface TVSectionTests ()
+
+@property (strong, nonatomic) TVSection* section;
+
+@end
+
 @implementation TVSectionTests
+
+-(void)setUp
+{
+    [super setUp];
+    
+    self.section = [TVSection sectionWithItems:nil cellGenerator:^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; }];
+}
+
+-(void)tearDown
+{
+    [super tearDown];
+    self.section = nil;
+}
 
 -(void)testSectionItems
 {
     STAssertThrows( [TVSection sectionWithItems:nil cellGenerator:nil], nil );
     STAssertThrows( [TVSection sectionWithItems:@[] cellGenerator:nil], nil );
+    
     TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
+
     STAssertNoThrow( [TVSection sectionWithItems:nil cellGenerator:generator], nil);
     
     NSArray* items = @[];
@@ -27,33 +48,28 @@
 
 -(void)testSectionNillBlockSetters
 {
-    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
-    
-    TVSection* section = [TVSection sectionWithItems:nil cellGenerator:generator];
-    STAssertThrows( section.itemsCounter = nil, nil);
-    STAssertThrows( section.itemGetter = nil, nil);
-    STAssertThrows( section.cellGenerator = nil, nil);
+    STAssertThrows( self.section.itemsCounter = nil, nil);
+    STAssertThrows( self.section.itemGetter = nil, nil);
+    STAssertThrows( self.section.cellGenerator = nil, nil);
 }
 
 -(void)testItemsSetter
 {
-    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
-    TVSection* section = [TVSection sectionWithItems:nil cellGenerator:generator];
     NSArray* items = @[ @1, @2, @3 ];
     
-    section.items = items;
-    STAssertNotNil( section.itemsCounter, nil);
-    if ( section.itemsCounter )
+    self.section.items = items;
+    STAssertNotNil( self.section.itemsCounter, nil);
+    if ( self.section.itemsCounter )
     {
-        STAssertEquals( section.itemsCounter(section), items.count, nil);
+        STAssertEquals( self.section.itemsCounter(self.section), items.count, nil);
     }
     
-    STAssertNotNil( section.itemGetter, nil);
-    if (  section.itemGetter )
+    STAssertNotNil( self.section.itemGetter, nil);
+    if (  self.section.itemGetter )
     {
         for (NSUInteger i = 0; i < items.count; ++i)
         {
-            STAssertEqualObjects( section.itemGetter(section, i), items[i], nil);
+            STAssertEqualObjects( self.section.itemGetter(self.section, i), items[i], nil);
         }
     }
 }

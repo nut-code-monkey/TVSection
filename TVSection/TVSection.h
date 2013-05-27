@@ -11,16 +11,22 @@
 @class TVSection;
 
 typedef NSUInteger(^TVSectionItemsCounter)(TVSection* section);
-typedef UITableViewCell*(^TVSectionCellGenerator)(TVSection* section, NSUInteger index);
 typedef id(^TVSectionItemGetter)(TVSection* section, NSUInteger index);
+
+typedef UITableViewCell*(^TVSectionCellGenerator)(TVSection* section, NSUInteger index);
+typedef CGFloat(^TVSectionCellHeight)(UITableView* table, TVSection* section, NSUInteger index);
+typedef void(^TVSectionOnClick)(TVSection* section, NSUInteger index);
 
 @interface TVSection : NSObject
 
+@property (strong, nonatomic) id title;
 @property (strong, nonatomic) NSArray* items;
 @property (strong, nonatomic) TVSectionItemsCounter itemsCounter;
 @property (strong, nonatomic) TVSectionItemGetter itemGetter;
 
 @property (strong, nonatomic) TVSectionCellGenerator cellGenerator;
+@property (strong, nonatomic) TVSectionCellHeight cellHeight;
+@property (strong, nonatomic) TVSectionOnClick onClick;
 
 +(id)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator;
 
