@@ -7,26 +7,55 @@
 //
 
 #import "TVSectionTests.h"
+#import "TVSection.h"
 
 @implementation TVSectionTests
 
-- (void)setUp
+-(void)testSectionItems
 {
-    [super setUp];
+    STAssertThrows( [TVSection sectionWithItems:nil cellGenerator:nil], nil );
+    STAssertThrows( [TVSection sectionWithItems:@[] cellGenerator:nil], nil );
+    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
+    STAssertNoThrow( [TVSection sectionWithItems:nil cellGenerator:generator], nil);
     
-    // Set-up code here.
+    NSArray* items = @[];
+    TVSection* section = [TVSection sectionWithItems:items cellGenerator:generator];
+    STAssertNotNil(section, nil);
+    STAssertEqualObjects(section.cellGenerator, generator, nil);
+    STAssertEqualObjects(section.items, items, nil);
 }
 
-- (void)tearDown
+-(void)testSectionNillBlockSetters
 {
-    // Tear-down code here.
+    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
     
-    [super tearDown];
+    TVSection* section = [TVSection sectionWithItems:nil cellGenerator:generator];
+    STAssertThrows( section.itemsCounter = nil, nil);
+    STAssertThrows( section.itemGetter = nil, nil);
+    STAssertThrows( section.cellGenerator = nil, nil);
 }
 
-- (void)testExample
+-(void)testItemsSetter
 {
-    STFail(@"Unit tests are not implemented yet in TVSectionTests");
+    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
+    TVSection* section = [TVSection sectionWithItems:nil cellGenerator:generator];
+    NSArray* items = @[ @1, @2, @3 ];
+    
+    section.items = items;
+    STAssertNotNil( section.itemsCounter, nil);
+    if ( section.itemsCounter )
+    {
+        STAssertEquals( section.itemsCounter(section), items.count, nil);
+    }
+    
+    STAssertNotNil( section.itemGetter, nil);
+    if (  section.itemGetter )
+    {
+        for (NSUInteger i = 0; i < items.count; ++i)
+        {
+            STAssertEqualObjects( section.itemGetter(section, i), items[i], nil);
+        }
+    }
 }
 
 @end
