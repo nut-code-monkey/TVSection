@@ -58,6 +58,7 @@
 		506A1D73175385C600CC33B0 /* TVSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVSectionTableViewController.h; sourceTree = "<group>"; };
 		506A1D74175385C600CC33B0 /* TVSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVSectionTableViewController.m; sourceTree = "<group>"; };
 		506A1D761753902A00CC33B0 /* TVSection.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TVSection.podspec; sourceTree = "<group>"; };
+		506A1D771753955400CC33B0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 		506A1D3F175372E000CC33B0 = {
 			isa = PBXGroup;
 			children = (
+				506A1D771753955400CC33B0 /* README.md */,
 				506A1D761753902A00CC33B0 /* TVSection.podspec */,
 				506A1D4D175372E000CC33B0 /* TVSection */,
 				506A1D62175372E000CC33B0 /* TVSectionTests */,
