@@ -13,9 +13,9 @@
 typedef NSUInteger(^TVSectionItemsCounter)(TVSection* section);
 typedef id(^TVSectionItemGetter)(TVSection* section, NSUInteger index);
 
-typedef UITableViewCell*(^TVSectionCellGenerator)(TVSection* section, NSUInteger index);
+typedef UITableViewCell*(^TVSectionCellGenerator)(TVSection* section, id item, NSUInteger index);
 typedef CGFloat(^TVSectionCellHeight)(UITableView* table, TVSection* section, NSUInteger index);
-typedef void(^TVSectionOnClick)(TVSection* section, NSUInteger index);
+typedef void(^TVSectionOnClick)(TVSection* section, id item, NSUInteger index);
 
 @interface TVSection : NSObject
 

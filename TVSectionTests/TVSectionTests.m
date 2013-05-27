@@ -21,7 +21,7 @@
 {
     [super setUp];
     
-    self.section = [TVSection sectionWithItems:nil cellGenerator:^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; }];
+    self.section = [TVSection sectionWithItems:nil cellGenerator:^UITableViewCell*(TVSection* section, id item, NSUInteger index){ return nil; }];
 }
 
 -(void)tearDown
@@ -35,7 +35,7 @@
     STAssertThrows( [TVSection sectionWithItems:nil cellGenerator:nil], nil );
     STAssertThrows( [TVSection sectionWithItems:@[] cellGenerator:nil], nil );
     
-    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, NSUInteger index){ return nil; };
+    TVSectionCellGenerator generator = ^UITableViewCell*(TVSection* section, id item, NSUInteger index){ return nil; };
 
     STAssertNoThrow( [TVSection sectionWithItems:nil cellGenerator:generator], nil);
     

@@ -8,6 +8,8 @@
 
 #import "TVSection.h"
 
+#import <UIKit/UIKit.h>
+
 @implementation TVSection
 
 -(void)dealloc
@@ -25,6 +27,7 @@
     {
         self.items = items;
         self.cellGenerator = generator;
+        self.cellHeight = nil;
     }
     return self;
 }
@@ -57,6 +60,15 @@
 {
     NSParameterAssert(cellGenerator);
     _cellGenerator = cellGenerator;
+}
+
+-(void)setCellHeight:(TVSectionCellHeight)cellHeight
+{
+    if ( !cellHeight )
+    {
+        cellHeight = ^(UITableView* table, TVSection* section, NSUInteger index){ return table.rowHeight; };
+    }
+    _cellHeight = cellHeight;
 }
 
 @end

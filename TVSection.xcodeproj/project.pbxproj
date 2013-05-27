@@ -16,6 +16,7 @@
 		506A1D61175372E000CC33B0 /* libTVSection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 506A1D48175372E000CC33B0 /* libTVSection.a */; };
 		506A1D67175372E000CC33B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 506A1D65175372E000CC33B0 /* InfoPlist.strings */; };
 		506A1D6A175372E000CC33B0 /* TVSectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A1D69175372E000CC33B0 /* TVSectionTests.m */; };
+		506A1D75175385C600CC33B0 /* TVSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A1D74175385C600CC33B0 /* TVSectionTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		506A1D66175372E000CC33B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		506A1D68175372E000CC33B0 /* TVSectionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVSectionTests.h; sourceTree = "<group>"; };
 		506A1D69175372E000CC33B0 /* TVSectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVSectionTests.m; sourceTree = "<group>"; };
+		506A1D73175385C600CC33B0 /* TVSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVSectionTableViewController.h; sourceTree = "<group>"; };
+		506A1D74175385C600CC33B0 /* TVSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVSectionTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +114,11 @@
 		506A1D4D175372E000CC33B0 /* TVSection */ = {
 			isa = PBXGroup;
 			children = (
+				506A1D4E175372E000CC33B0 /* Supporting Files */,
 				506A1D50175372E000CC33B0 /* TVSection.h */,
 				506A1D52175372E000CC33B0 /* TVSection.m */,
-				506A1D4E175372E000CC33B0 /* Supporting Files */,
+				506A1D73175385C600CC33B0 /* TVSectionTableViewController.h */,
+				506A1D74175385C600CC33B0 /* TVSectionTableViewController.m */,
 			);
 			path = TVSection;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506A1D53175372E000CC33B0 /* TVSection.m in Sources */,
+				506A1D75175385C600CC33B0 /* TVSectionTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +409,7 @@
 				506A1D6F175372E000CC33B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		506A1D70175372E000CC33B0 /* Build configuration list for PBXNativeTarget "TVSectionTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +418,7 @@
 				506A1D72175372E000CC33B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
