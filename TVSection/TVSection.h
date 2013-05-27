@@ -10,6 +10,14 @@
 
 @class TVSection;
 
+@protocol TVSectionDelegate <NSObject>
+
+@required
+-(void)section:( TVSection* )section willSetNewItems:( NSArray* )items;
+-(void)section:( TVSection* )section didSetNewItems:( NSArray* )items;
+
+@end
+
 typedef NSUInteger(^TVSectionItemsCounter)(TVSection* section);
 typedef id(^TVSectionItemGetter)(TVSection* section, NSUInteger index);
 
@@ -27,6 +35,8 @@ typedef void(^TVSectionOnClick)(TVSection* section, id item, NSUInteger index);
 @property (strong, nonatomic) TVSectionCellGenerator cellGenerator;
 @property (strong, nonatomic) TVSectionCellHeight cellHeight;
 @property (strong, nonatomic) TVSectionOnClick onClick;
+
+@property (weak, nonatomic) id<TVSectionDelegate> sectionDelegate;
 
 +(id)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator;
 

@@ -9,7 +9,7 @@
 #import "TVSectionTableViewController.h"
 #import "TVSection.h"
 
-@interface TVSectionTableViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TVSectionTableViewController () <UITableViewDelegate, UITableViewDataSource, TVSectionDelegate>
 
 @end
 
@@ -18,6 +18,10 @@
 -(void)setSections:(NSArray *)sections
 {
     _sections = sections;
+    for ( TVSection* section in sections )
+    {
+        section.sectionDelegate = self;
+    }
     [self.tableView reloadData];
 }
 
@@ -55,6 +59,18 @@
     {
         section.onClick( section, section.itemGetter(section, indexPath.row), indexPath.row );
     }
+}
+
+#pragma mark TVSectionDelegate
+
+-(void)section:( TVSection* )section willSetNewItems:( NSArray* )items
+{
+
+}
+
+-(void)section:( TVSection* )section didSetNewItems:( NSArray* )items
+{
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:[self.sections indexOfObject:section]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end
