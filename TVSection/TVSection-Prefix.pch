@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TVSection' target in the 'TVSection' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

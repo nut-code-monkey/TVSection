@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		506A1D4C175372E000CC33B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506A1D4B175372E000CC33B0 /* Foundation.framework */; };
+		506A1D51175372E000CC33B0 /* TVSection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 506A1D50175372E000CC33B0 /* TVSection.h */; };
+		506A1D53175372E000CC33B0 /* TVSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A1D52175372E000CC33B0 /* TVSection.m */; };
+		506A1D5B175372E000CC33B0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506A1D5A175372E000CC33B0 /* SenTestingKit.framework */; };
+		506A1D5D175372E000CC33B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506A1D5C175372E000CC33B0 /* UIKit.framework */; };
+		506A1D5E175372E000CC33B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506A1D4B175372E000CC33B0 /* Foundation.framework */; };
+		506A1D61175372E000CC33B0 /* libTVSection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 506A1D48175372E000CC33B0 /* libTVSection.a */; };
+		506A1D67175372E000CC33B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 506A1D65175372E000CC33B0 /* InfoPlist.strings */; };
+		506A1D6A175372E000CC33B0 /* TVSectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 506A1D69175372E000CC33B0 /* TVSectionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		506A1D5F175372E000CC33B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 506A1D40175372E000CC33B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 506A1D47175372E000CC33B0;
+			remoteInfo = TVSection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		506A1D46175372E000CC33B0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				506A1D51175372E000CC33B0 /* TVSection.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		506A1D48175372E000CC33B0 /* libTVSection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTVSection.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		506A1D4B175372E000CC33B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		506A1D4F175372E000CC33B0 /* TVSection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVSection-Prefix.pch"; sourceTree = "<group>"; };
+		506A1D50175372E000CC33B0 /* TVSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVSection.h; sourceTree = "<group>"; };
+		506A1D52175372E000CC33B0 /* TVSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVSection.m; sourceTree = "<group>"; };
+		506A1D59175372E000CC33B0 /* TVSectionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVSectionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		506A1D5A175372E000CC33B0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		506A1D5C175372E000CC33B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		506A1D64175372E000CC33B0 /* TVSectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TVSectionTests-Info.plist"; sourceTree = "<group>"; };
+		506A1D66175372E000CC33B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		506A1D68175372E000CC33B0 /* TVSectionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVSectionTests.h; sourceTree = "<group>"; };
+		506A1D69175372E000CC33B0 /* TVSectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVSectionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		506A1D45175372E000CC33B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506A1D4C175372E000CC33B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506A1D55175372E000CC33B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506A1D5B175372E000CC33B0 /* SenTestingKit.framework in Frameworks */,
+				506A1D5D175372E000CC33B0 /* UIKit.framework in Frameworks */,
+				506A1D5E175372E000CC33B0 /* Foundation.framework in Frameworks */,
+				506A1D61175372E000CC33B0 /* libTVSection.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		506A1D3F175372E000CC33B0 = {
+			isa = PBXGroup;
+			children = (
+				506A1D4D175372E000CC33B0 /* TVSection */,
+				506A1D62175372E000CC33B0 /* TVSectionTests */,
+				506A1D4A175372E000CC33B0 /* Frameworks */,
+				506A1D49175372E000CC33B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		506A1D49175372E000CC33B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				506A1D48175372E000CC33B0 /* libTVSection.a */,
+				506A1D59175372E000CC33B0 /* TVSectionTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		506A1D4A175372E000CC33B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				506A1D4B175372E000CC33B0 /* Foundation.framework */,
+				506A1D5A175372E000CC33B0 /* SenTestingKit.framework */,
+				506A1D5C175372E000CC33B0 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		506A1D4D175372E000CC33B0 /* TVSection */ = {
+			isa = PBXGroup;
+			children = (
+				506A1D50175372E000CC33B0 /* TVSection.h */,
+				506A1D52175372E000CC33B0 /* TVSection.m */,
+				506A1D4E175372E000CC33B0 /* Supporting Files */,
+			);
+			path = TVSection;
+			sourceTree = "<group>";
+		};
+		506A1D4E175372E000CC33B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				506A1D4F175372E000CC33B0 /* TVSection-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		506A1D62175372E000CC33B0 /* TVSectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				506A1D68175372E000CC33B0 /* TVSectionTests.h */,
+				506A1D69175372E000CC33B0 /* TVSectionTests.m */,
+				506A1D63175372E000CC33B0 /* Supporting Files */,
+			);
+			path = TVSectionTests;
+			sourceTree = "<group>";
+		};
+		506A1D63175372E000CC33B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				506A1D64175372E000CC33B0 /* TVSectionTests-Info.plist */,
+				506A1D65175372E000CC33B0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		506A1D47175372E000CC33B0 /* TVSection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506A1D6D175372E000CC33B0 /* Build configuration list for PBXNativeTarget "TVSection" */;
+			buildPhases = (
+				506A1D44175372E000CC33B0 /* Sources */,
+				506A1D45175372E000CC33B0 /* Frameworks */,
+				506A1D46175372E000CC33B0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVSection;
+			productName = TVSection;
+			productReference = 506A1D48175372E000CC33B0 /* libTVSection.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		506A1D58175372E000CC33B0 /* TVSectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506A1D70175372E000CC33B0 /* Build configuration list for PBXNativeTarget "TVSectionTests" */;
+			buildPhases = (
+				506A1D54175372E000CC33B0 /* Sources */,
+				506A1D55175372E000CC33B0 /* Frameworks */,
+				506A1D56175372E000CC33B0 /* Resources */,
+				506A1D57175372E000CC33B0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				506A1D60175372E000CC33B0 /* PBXTargetDependency */,
+			);
+			name = TVSectionTests;
+			productName = TVSectionTests;
+			productReference = 506A1D59175372E000CC33B0 /* TVSectionTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		506A1D40175372E000CC33B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Max Lunin";
+			};
+			buildConfigurationList = 506A1D43175372E000CC33B0 /* Build configuration list for PBXProject "TVSection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 506A1D3F175372E000CC33B0;
+			productRefGroup = 506A1D49175372E000CC33B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				506A1D47175372E000CC33B0 /* TVSection */,
+				506A1D58175372E000CC33B0 /* TVSectionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		506A1D56175372E000CC33B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506A1D67175372E000CC33B0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		506A1D57175372E000CC33B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		506A1D44175372E000CC33B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506A1D53175372E000CC33B0 /* TVSection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506A1D54175372E000CC33B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506A1D6A175372E000CC33B0 /* TVSectionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		506A1D60175372E000CC33B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 506A1D47175372E000CC33B0 /* TVSection */;
+			targetProxy = 506A1D5F175372E000CC33B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		506A1D65175372E000CC33B0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506A1D66175372E000CC33B0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		506A1D6B175372E000CC33B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		506A1D6C175372E000CC33B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		506A1D6E175372E000CC33B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TVSection.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TVSection/TVSection-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		506A1D6F175372E000CC33B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TVSection.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TVSection/TVSection-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		506A1D71175372E000CC33B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TVSection/TVSection-Prefix.pch";
+				INFOPLIST_FILE = "TVSectionTests/TVSectionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		506A1D72175372E000CC33B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TVSection/TVSection-Prefix.pch";
+				INFOPLIST_FILE = "TVSectionTests/TVSectionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		506A1D43175372E000CC33B0 /* Build configuration list for PBXProject "TVSection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506A1D6B175372E000CC33B0 /* Debug */,
+				506A1D6C175372E000CC33B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506A1D6D175372E000CC33B0 /* Build configuration list for PBXNativeTarget "TVSection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506A1D6E175372E000CC33B0 /* Debug */,
+				506A1D6F175372E000CC33B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		506A1D70175372E000CC33B0 /* Build configuration list for PBXNativeTarget "TVSectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506A1D71175372E000CC33B0 /* Debug */,
+				506A1D72175372E000CC33B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 506A1D40175372E000CC33B0 /* Project object */;
+}
