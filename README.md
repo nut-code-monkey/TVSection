@@ -1,6 +1,12 @@
 TVSection
 =========
 
+*Install*
+```
+pod 'TVSection'
+```
+
+
 If you have a heterogeneous data, to be shown in the sections in the UITableView, you can inherit your view controller from *TVSectionTableViewController*.
 
 All that you must do after that is:
