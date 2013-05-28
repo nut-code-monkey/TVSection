@@ -19,7 +19,7 @@ All that you must do after that is:
     TVSection* numberSection = [TVSection sectionWithItems:@[ @1, @2, @3, @4, @5 ]
                                              cellGenerator:^(TVSection* section, NSNumber* number, NSUInteger idx)
                         {
-                            UITableViewCell* cellForNumber = [tableView dequeueReusableCellWithIdentifier:@"cellForNumberItems"];
+                            UITableViewCell* cellForNumber = [tableView dequeueReusableCellWithIdentifier:@"cellForNumber"];
                             // configure cell for number
                             return cellForNumber;
                         }];
@@ -27,7 +27,7 @@ All that you must do after that is:
     TVSection* stringSection = [TVSection sectionWithItems:@[ @"1", @"2", @"3", @"4", @"5" ]
                                              cellGenerator:^(TVSection* section, NSString* string, NSUInteger idx)
                          {
-                             UITableViewCell* cellForString = [tableView dequeueReusableCellWithIdentifier:@"cellForNumberItems"];
+                             UITableViewCell* cellForString = [tableView dequeueReusableCellWithIdentifier:@"cellForStrings"];
                              // configure cell for string
                              return cellForString;
                          }];
