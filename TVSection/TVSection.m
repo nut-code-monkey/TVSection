@@ -73,11 +73,11 @@
     return _cellHeightGetter;
 }
 
--(void)setCellHeight:(NSNumber *)cellHeight
+-(void)setCellHeight:( CGFloat )cellHeight
 {
-    self.cellHeightGetter = ^CGFloat(UITableView* table, TVSection* section, NSUInteger index)
+    self.cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index)
     {
-        return [cellHeight doubleValue];
+        return cellHeight;
     };
 }
 

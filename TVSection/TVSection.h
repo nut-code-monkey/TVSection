@@ -40,6 +40,6 @@ typedef void(^TVSectionOnClick)(TVSection* section, id item, NSUInteger index);
 
 +(id)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator;
 
--(void)setCellHeight:(NSNumber *)cellHeight;
+-(void)setCellHeight:( CGFloat )cellHeight;
 
 @end

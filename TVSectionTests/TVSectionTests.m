@@ -92,10 +92,10 @@
     CGFloat defaultHeight = self.section.cellHeightGetter((UITableView*)table, self.section, 0);
     STAssertEqualObjects( @(defaultHeight), @(table.rowHeight), nil);
     
-    id newValue = @25;
+    CGFloat newValue = 25;
     self.section.cellHeight = newValue;
     id new = @(self.section.cellHeightGetter((UITableView*)table, self.section, 0));
-    STAssertEqualObjects(new, newValue, nil);
+    STAssertEqualObjects(new, @(newValue), nil);
 }
 
 @end
