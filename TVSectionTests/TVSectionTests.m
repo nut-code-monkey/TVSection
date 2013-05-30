@@ -9,6 +9,18 @@
 #import "TVSectionTests.h"
 #import "TVSection.h"
 
+@interface TVTableView : NSObject
+
+-(CGFloat)rowHeight;
+
+@end
+
+@implementation TVTableView
+
+-(CGFloat)rowHeight{ return 100500; }
+
+@end
+
 @interface TVSectionTests ()
 
 @property (strong, nonatomic) TVSection* section;
@@ -72,6 +84,18 @@
             STAssertEqualObjects( self.section.itemGetter(self.section, i), items[i], nil);
         }
     }
+}
+
+-(void)testItemCounter
+{
+    TVTableView* table =[TVTableView new];
+    CGFloat defaultHeight = self.section.cellHeightGetter((UITableView*)table, self.section, 0);
+    STAssertEqualObjects( @(defaultHeight), @(table.rowHeight), nil);
+    
+    id newValue = @25;
+    self.section.cellHeight = newValue;
+    id new = @(self.section.cellHeightGetter((UITableView*)table, self.section, 0));
+    STAssertEqualObjects(new, newValue, nil);
 }
 
 @end

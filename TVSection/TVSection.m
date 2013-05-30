@@ -27,7 +27,7 @@
     {
         self.items = items;
         self.cellGenerator = generator;
-        self.cellHeight = nil;
+        self.cellHeightGetter = nil;
     }
     return self;
 }
@@ -64,13 +64,21 @@
     _cellGenerator = cellGenerator;
 }
 
--(void)setCellHeight:(TVSectionCellHeight)cellHeight
+-(TVSectionCellHeight)cellHeightGetter
 {
-    if ( !cellHeight )
+    if ( !_cellHeightGetter)
     {
-        cellHeight = ^(UITableView* table, TVSection* section, NSUInteger index){ return table.rowHeight; };
+        _cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index){ return table.rowHeight; };
     }
-    _cellHeight = cellHeight;
+    return _cellHeightGetter;
+}
+
+-(void)setCellHeight:(NSNumber *)cellHeight
+{
+    self.cellHeightGetter = ^CGFloat(UITableView* table, TVSection* section, NSUInteger index)
+    {
+        return [cellHeight doubleValue];
+    };
 }
 
 @end
