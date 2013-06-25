@@ -43,7 +43,7 @@
     _items = items;
     self.itemsCounter = ^(TVSection* section){ return section.items.count; };
     self.itemGetter = ^(TVSection* section, NSUInteger index){ return section.items[index]; };
-    [self.sectionDelegate section:self willSetNewItems:items];
+    [self.sectionDelegate section:self didSetNewItems:items];
 }
 
 -(void)setItemsCounter:(TVSectionItemsCounter)itemsCounter
