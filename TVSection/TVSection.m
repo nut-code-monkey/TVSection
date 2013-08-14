@@ -32,12 +32,12 @@
     return self;
 }
 
-+(id)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator
++(instancetype)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator
 {
     return [[self alloc] initWithItems:items cellGenerator:generator];
 }
 
--(void)setItems:(NSArray *)items
+-(void)setItems:( NSArray* )items
 {
     [self.sectionDelegate section:self willSetNewItems:items];
     _items = items;
@@ -73,12 +73,16 @@
     return _cellHeightGetter;
 }
 
--(void)setCellHeight:( CGFloat )cellHeight
+-(instancetype)setCellHeight:( CGFloat )cellHeight
 {
-    self.cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index)
-    {
-        return cellHeight;
-    };
+    self.cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index){ return cellHeight; };
+    return self;
+}
+
+-(instancetype)onClick:( void(^)(TVSection* section, id item, NSUInteger index) )onClickBlock
+{
+    self.onClick = onClickBlock;
+    return self;
 }
 
 @end

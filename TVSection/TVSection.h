@@ -28,7 +28,7 @@ typedef void(^TVSectionOnClick)(TVSection* section, id item, NSUInteger index);
 @interface TVSection : NSObject
 
 @property (strong, nonatomic) id title;
-@property (strong, nonatomic) NSArray* items;
+@property (copy, nonatomic) NSArray* items;
 @property (strong, nonatomic) TVSectionItemsCounter itemsCounter;
 @property (strong, nonatomic) TVSectionItemGetter itemGetter;
 
@@ -38,8 +38,8 @@ typedef void(^TVSectionOnClick)(TVSection* section, id item, NSUInteger index);
 
 @property (weak, nonatomic) id<TVSectionDelegate> sectionDelegate;
 
-+(id)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator;
-
--(void)setCellHeight:( CGFloat )cellHeight;
++(instancetype)sectionWithItems:( NSArray* )items cellGenerator:(UITableViewCell*(^)(TVSection* section, id item, NSUInteger idx))generator;
+-(instancetype)setCellHeight:( CGFloat )cellHeight;
+-(instancetype)onClick:( void(^)(TVSection* section, id item, NSUInteger index) )onClickBlock;
 
 @end
