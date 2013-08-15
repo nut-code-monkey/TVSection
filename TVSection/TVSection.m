@@ -32,12 +32,12 @@
     return self;
 }
 
-+(instancetype)sectionWithItems:( NSArray* )items cellGenerator:( TVSectionCellGenerator )generator
++(instancetype)sectionWithItems:(NSArray*)items cellGenerator:(TVSectionCellGenerator)generator
 {
     return [[self alloc] initWithItems:items cellGenerator:generator];
 }
 
--(void)setItems:( NSArray* )items
+-(void)setItems:(NSArray*)items
 {
     [self.sectionDelegate section:self willSetNewItems:items];
     _items = items;
@@ -46,10 +46,28 @@
     [self.sectionDelegate section:self didSetNewItems:items];
 }
 
+-(instancetype)title:(id)title
+{
+    self.title = title;
+    return self;
+}
+
+-(instancetype)itemsCounter:(TVSectionItemsCounter)itemsCounter
+{
+    self.itemsCounter = itemsCounter;
+    return self;
+}
+
 -(void)setItemsCounter:(TVSectionItemsCounter)itemsCounter
 {
     NSParameterAssert(itemsCounter);
     _itemsCounter = itemsCounter;
+}
+
+-(instancetype)itemGetter:(TVSectionItemGetter)itemGetter
+{
+    self.itemGetter = itemGetter;
+    return self;
 }
 
 -(void)setItemGetter:(TVSectionItemGetter)itemGetter
@@ -73,15 +91,27 @@
     return _cellHeightGetter;
 }
 
--(instancetype)setCellHeight:( CGFloat )cellHeight
+-(instancetype)cellHeight:( CGFloat )cellHeight
 {
     self.cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index){ return cellHeight; };
+    return self;
+}
+
+-(instancetype)cellHeightGetter:(TVSectionCellHeight)cellHeightGetter
+{
+    self.cellHeightGetter = cellHeightGetter;
     return self;
 }
 
 -(instancetype)onClick:( void(^)(TVSection* section, id item, NSUInteger index) )onClickBlock
 {
     self.onClick = onClickBlock;
+    return self;
+}
+
+-(instancetype)sectionDelegate:(id<TVSectionDelegate>)sectionDelegate
+{
+    self.sectionDelegate = sectionDelegate;
     return self;
 }
 

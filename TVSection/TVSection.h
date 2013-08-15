@@ -38,8 +38,16 @@ typedef void(^TVSectionOnClick)(TVSection* section, id item, NSUInteger index);
 
 @property (weak, nonatomic) id<TVSectionDelegate> sectionDelegate;
 
-+(instancetype)sectionWithItems:( NSArray* )items cellGenerator:(UITableViewCell*(^)(TVSection* section, id item, NSUInteger idx))generator;
--(instancetype)setCellHeight:( CGFloat )cellHeight;
+
++(instancetype)sectionWithItems:( NSArray* )items
+                  cellGenerator:(UITableViewCell*(^)(TVSection* section, id item, NSUInteger idx))generator;
+
+-(instancetype)title:( id )title;
+-(instancetype)itemsCounter:( NSUInteger(^)(TVSection* section) )itemsCounter;
+-(instancetype)itemGetter:( id(^)(TVSection* section, NSUInteger index) )itemGetter;
+-(instancetype)cellHeight:( CGFloat )cellHeight;
+-(instancetype)cellHeightGetter:( CGFloat(^)(UITableView* table, TVSection* section, NSUInteger index) )cellHeightGetter;
 -(instancetype)onClick:( void(^)(TVSection* section, id item, NSUInteger index) )onClickBlock;
+-(instancetype)sectionDelegate:( id<TVSectionDelegate> )sectionDelegate;
 
 @end
