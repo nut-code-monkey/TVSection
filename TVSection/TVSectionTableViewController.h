@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSArray* sections;
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
 
+-(void)setSections:(NSArray *)sections reloadTableView:( BOOL )reloadTableView;
+
 @end

@@ -86,14 +86,14 @@
 {
     if ( !_cellHeightGetter)
     {
-        _cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index){ return table.rowHeight; };
+        _cellHeightGetter = ^(TVSection* section, NSUInteger index){ return section.tableView.rowHeight; };
     }
     return _cellHeightGetter;
 }
 
 -(instancetype)cellHeight:( CGFloat )cellHeight
 {
-    self.cellHeightGetter = ^(UITableView* table, TVSection* section, NSUInteger index){ return cellHeight; };
+    self.cellHeightGetter = ^(TVSection* section, NSUInteger index){ return cellHeight; };
     return self;
 }
 

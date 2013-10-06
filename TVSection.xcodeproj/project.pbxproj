@@ -501,6 +501,7 @@
 		506A1D6E175372E000CC33B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DSTROOT = /tmp/TVSection.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TVSection/TVSection-Prefix.pch";
@@ -513,6 +514,7 @@
 		506A1D6F175372E000CC33B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DSTROOT = /tmp/TVSection.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TVSection/TVSection-Prefix.pch";
@@ -562,6 +564,7 @@
 				504C5DAA1754AF4A00E5D578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		506A1D43175372E000CC33B0 /* Build configuration list for PBXProject "TVSection" */ = {
 			isa = XCConfigurationList;

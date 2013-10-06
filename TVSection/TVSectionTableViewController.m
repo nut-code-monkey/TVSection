@@ -17,12 +17,22 @@
 
 -(void)setSections:(NSArray *)sections
 {
+    [self setSections:sections reloadTableView:YES];
+}
+
+-(void)setSections:(NSArray *)sections reloadTableView:( BOOL )reloadTableView
+{
     _sections = sections;
     for ( TVSection* section in sections )
     {
         section.sectionDelegate = self;
+        section.tableView = self.tableView;
     }
-    [self.tableView reloadData];
+
+    if (reloadTableView)
+    {
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark UITableViewDataSource
@@ -49,7 +59,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TVSection* section = self.sections[indexPath.section];
-    return section.cellHeightGetter(tableView, section, indexPath.row);
+    return section.cellHeightGetter(section, indexPath.row);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,6 +69,11 @@
     {
         section.onClick( section, section.itemGetter(section, indexPath.row), indexPath.row );
     }
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self.sections[section] title];
 }
 
 #pragma mark TVSectionDelegate
