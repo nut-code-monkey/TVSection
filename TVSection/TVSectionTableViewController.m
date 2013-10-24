@@ -59,7 +59,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TVSection* section = self.sections[indexPath.section];
-    return section.cellHeightGetter(section, indexPath.row);
+    return section.cellHeightGetter(section, section.itemGetter(section, indexPath.row), indexPath.row);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
