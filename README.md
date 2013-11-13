@@ -6,7 +6,6 @@ TVSection
 pod 'TVSection'
 ```
 
-
 If you have a heterogeneous data, to be shown in the sections in the UITableView, you can inherit your view controller from *TVSectionTableViewController*.
 
 All that you must do after that is:
@@ -43,3 +42,7 @@ All that you must do after that is:
     self.sections = @[numberSection, stringSection];
 }
 ```
+
+License
+-------
+MIT - read LICENCE
