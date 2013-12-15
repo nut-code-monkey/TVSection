@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TVSection.h"
 
-@interface TVSectionTableViewController : UIViewController
+@interface TVSectionTableViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource, TVSectionDelegate>
 
 @property (strong, nonatomic) NSArray* sections;
 @property (strong, nonatomic) IBOutlet UITableView* tableView;

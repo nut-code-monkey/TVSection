@@ -7,9 +7,8 @@
 //
 
 #import "TVSectionTableViewController.h"
-#import "TVSection.h"
 
-@interface TVSectionTableViewController () <UITableViewDelegate, UITableViewDataSource, TVSectionDelegate>
+@interface TVSectionTableViewController ()
 
 @end
 
