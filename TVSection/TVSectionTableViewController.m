@@ -50,7 +50,7 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TVSection* section = self.sections[indexPath.section];
-    return section.cellGenerator(section, section.itemGetter(section, indexPath.row), indexPath.row);
+    return section.cellGenerator(section, section.itemGetter(section, indexPath.row), indexPath);
 }
 
 #pragma mark UITableViewDelegate

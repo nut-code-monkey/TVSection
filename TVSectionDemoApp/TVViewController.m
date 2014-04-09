@@ -21,9 +21,10 @@
     __weak UITableView* tableView = self.tableView;
     
     TVSection* numberSection = [[[TVSection sectionWithItems:@[ @1, @2, @3, @4, @5 ]
-                                              cellGenerator:^(TVSection* section, NSNumber* number, NSUInteger idx)
+                                              cellGenerator:^(TVSection* section, NSNumber* number, NSIndexPath* idx)
                                  {
-                                     UITableViewCell* cellForNumber = [tableView dequeueReusableCellWithIdentifier:@"cellForNumber"];
+                                     UITableViewCell* cellForNumber = [tableView dequeueReusableCellWithIdentifier:@"cellForNumber"
+                                                                                                      forIndexPath:idx];
                                      cellForNumber.textLabel.text = [number stringValue];
                                      return cellForNumber;
                                  }]
@@ -33,9 +34,10 @@
                                 }] title:@"Numbers"];
     
     TVSection* stringSection = [[[TVSection sectionWithItems:@[ @"string 1", @"string 2", @"string 3"]
-                                              cellGenerator:^(TVSection* section, NSString* string, NSUInteger idx)
+                                              cellGenerator:^(TVSection* section, NSString* string, NSIndexPath* idx)
                                  {
-                                     UITableViewCell* cellForString = [tableView dequeueReusableCellWithIdentifier:@"cellForStrings"];
+                                     UITableViewCell* cellForString = [tableView dequeueReusableCellWithIdentifier:@"cellForStrings"
+                                                                                                      forIndexPath:idx];
                                      cellForString.textLabel.text = string;
                                      return cellForString;
                                  }]
